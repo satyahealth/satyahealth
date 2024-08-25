@@ -1,0 +1,112 @@
+// Palette
+$wall: #0074D6;
+$octoink: #FFFFFF;
+$bjeans: #FF851B;
+$cottonballs: #F7F6EC;
+
+// Fukol Grid.
+.f-grid {
+  display: flex; /* 1 */
+  flex-wrap: wrap; /* 2 */
+  margin: -0.5em; /* 5 (edit me!) */
+  > * {
+    flex: 1 0 5em; /* 3 (edit me!) */
+    margin: 0.5em; /* 4 (edit me!) */
+  }
+}
+
+// Typed-js Blinking Cursor.
+.typed-cursor{
+    font-size: 3em;
+    opacity: 1;
+    -webkit-animation: blink 0.7s infinite;
+    -moz-animation: blink 0.7s infinite;
+    animation: blink 0.7s infinite;
+}
+@keyframes blink{
+    0% { opacity:1; }
+    50% { opacity:0; }
+    100% { opacity:1; }
+}
+@-webkit-keyframes blink{
+    0% { opacity:1; }
+    50% { opacity:0; }
+    100% { opacity:1; }
+}
+@-moz-keyframes blink{
+    0% { opacity:1; }
+    50% { opacity:0; }
+    100% { opacity:1; }
+}
+
+body{
+  background-color: $wall;
+  color:$octoink;
+  font-size:16px;
+  transition: 0.5s all ease;
+  a{
+    color:$octoink;
+    text-decoration:none;
+    :hover{
+      color:$bjeans;
+    }
+  }
+  h1{
+    display: inline-block;
+    a:hover{
+      color: $bjeans;
+    }
+  }
+  
+  ul{
+    text-decoration:none;
+    margin:0;
+    padding:0;
+    text-align:center;
+    li{
+      display:inline-block;
+      font-size:1.5em;
+      margin:0 5px;
+      a{
+        i{
+           color: $octoink;
+        }
+      }
+    }
+  }
+  
+  #big-ass-title{
+    height:50px;
+    font-size:3em;
+  }
+  
+  #sand-king{
+    max-width:960px;
+    width:100%;
+    height:auto;
+    text-align:center;
+  }
+  
+  #tiramenu{
+    text-transform: lowercase;
+    li{
+      :after{
+        content: "/";
+        position:relative;
+        margin-left:10px;
+      }
+    }
+  }
+  
+  .epicenter-ish{
+    position:absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  
+  .cloak{
+      display:none;
+  }
+  
+}
